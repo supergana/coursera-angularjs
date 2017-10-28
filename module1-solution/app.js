@@ -7,21 +7,25 @@
   LunchCheckController.inject = ['$scope'];
 
   function LunchCheckController($scope){
-    $scope.lunchlist = "a,b,c";
+    $scope.lunchlist = "";
 
     $scope.checkitems = function(){
-      var lunchitems = $scope.lunchlist.split(',');
-      var itemcount=0,i=0;
-      for(i=0;i<lunchitems.length;i++){
-        if(lunchitems[i].trim().length > 0){
-          itemcount++
-        }
+      if($scope.lunchlist.trim().length==0){
+        $scope.state = "Please enter data first"
+      }else{
+        var lunchitems = $scope.lunchlist.split(',');
+        var itemcount=0,i=0;
+        for(i=0;i<lunchitems.length;i++){
+          if(lunchitems[i].trim().length > 0){
+            itemcount++
+          }
 
-        if(itemcount > 3){
-          $scope.state = "Too much!"
-          break;
-        }else{
-          $scope.state = "Enjoy!"
+          if(itemcount > 3){
+            $scope.state = "Too much!"
+            break;
+          }else{
+            $scope.state = "Enjoy!"
+          }
         }
       }
     }
