@@ -23,6 +23,8 @@
           if(itemcount > 3){
             $scope.state = "Too much!"
             break;
+          }else if(itemcount < 1){
+            $scope.state = "Enter data first"
           }else{
             $scope.state = "Enjoy!"
           }
