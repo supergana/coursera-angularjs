@@ -22,7 +22,7 @@
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService){
      var vm = this;
-     vm.searchTerm = "curry";
+     vm.searchTerm = "";
      vm.foundItems = [];
      vm.message = "";
 
