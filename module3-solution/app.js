@@ -35,6 +35,8 @@
          var promise = MenuSearchService.getMatchedMenuItems(vm.searchTerm);
          promise.then(function (response){
            vm.foundItems = response.menu_items;
+           // console.log(vm.foundItems);
+
            if(vm.foundItems.length == 0){
              vm.message = "Nothing found";
            }

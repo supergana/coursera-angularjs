@@ -1,0 +1,7 @@
+<ul>
+
+  <li ng-repeat="cat in $ctrl.categories">
+   <a ui-sref="items({sname:cat.short_name})">{{cat.name}}, {{cat.short_name}}</a>
+   <!-- <a ui-sref="/items/ng-click="onRemove({index: $index});">Dont want this one</a> -->
+  </li>
+</ul>
