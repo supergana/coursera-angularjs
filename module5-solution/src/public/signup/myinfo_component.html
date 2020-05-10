@@ -1,0 +1,13 @@
+<br>
+
+<div class="container" ng-if="$ctrl.fname">
+  <h1>Registration Details</h1>
+  First Name: {{$ctrl.fname}} <br>
+  Last Name: {{$ctrl.lname}} <br>
+  Email: {{$ctrl.email}} <br>
+  Phone: {{$ctrl.phone}} <br>
+  Favouite Item: {{$ctrl.favItemName}} <br>
+</div>
+<div ng-if="!$ctrl.fname">
+  Not registered yet. Please register by clicking <a ui-sref="public.register"> here </a>.
+</div>
