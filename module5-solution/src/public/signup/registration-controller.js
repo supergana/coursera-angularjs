@@ -31,6 +31,9 @@ function RegistrationController(MenuService,RegistrationService) {
             $ctrl.RegistrationService.email = $ctrl.user.email;
             $ctrl.RegistrationService.phone = $ctrl.user.phone;
             $ctrl.RegistrationService.favItemName = $ctrl.favItemName;
+            $ctrl.RegistrationService.favItemSName = item.short_name;
+            $ctrl.RegistrationService.favItemDesc = item.description;
+
             // console.log($ctrl.RegistrationService);
           }
         });

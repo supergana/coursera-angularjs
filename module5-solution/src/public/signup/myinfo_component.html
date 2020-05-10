@@ -7,6 +7,9 @@
   Email: {{$ctrl.email}} <br>
   Phone: {{$ctrl.phone}} <br>
   Favouite Item: {{$ctrl.favItemName}} <br>
+  {{$ctrl.favItemDesc}}
+<img class="img-responsive" width="250" height="150" ng-src="{{$ctrl.basePath}}/images/{{$ctrl.favItemSName}}.jpg" alt="{{$ctrl.favItemName}}">
+
 </div>
 <div ng-if="!$ctrl.fname">
   Not registered yet. Please register by clicking <a ui-sref="public.register"> here </a>.
